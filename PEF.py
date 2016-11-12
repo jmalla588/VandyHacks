@@ -43,36 +43,16 @@ while 1:
 
     # If the user wants to perform image processing
     elif main == procMsg:
+        #TODO
+        pass
 
     # If the user wants to analyze an image
-    elif
+    elif main == analyzeMsg:
+        #TODO
+        pass
 
-    # If
+    # If the user wants to quit
     elif main == quitMsg:
         sys.exit(0)
 
     first = False;
-
-
-
-# # while 1:
-# title = "Embolism or Nah?"
-# eg.msgbox("Click the button below to select an image.", title)
-#
-#
-#
-# msg ="What is your favorite flavor?"
-# title = "Ice Cream Survey"
-# choices = ["Vanilla", "Chocolate", "Strawberry", "Rocky Road"]
-# choice = eg.choicebox(msg, title, choices)
-#
-# # note that we convert choice to string, in case
-# # the user cancelled the choice, and we got None.
-# eg.msgbox("You chose: " + str(choice), "Survey Result")
-#
-# msg = "Do you want to continue?"
-# title = "Please Confirm"
-# if eg.ccbox(msg, title):     # show a Continue/Cancel dialog
-#     pass  # user chose Continue
-# else:
-#     sys.exit(0)           # user chose Cancel
