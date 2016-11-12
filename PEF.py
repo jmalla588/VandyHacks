@@ -1,7 +1,10 @@
 #This is a sample file.
 import easygui as eg
 import sys
+import PIL
 from PIL import Image
+import PIL.ImageOps
+from PIL import ImageFilter
 
 
 title = "Embolism or nah?"
@@ -12,7 +15,7 @@ analyzeMsg = "Analyze Selected Image"
 
 msg = "Welcome to the Pulmonary Embolism Finder!"
 choices = [selMsg, quitMsg]
-first = True; addButton = True;
+first = True; addButton = True; useInverted = False;
 image = "pef.gif"
 filetypes = ["*.jpeg", "*.jpg", "*.png", "*.bmp"]
 
@@ -28,6 +31,10 @@ while 1:
         image = "1.gif"
         addButton = False;
 
+    if useInverted:
+        Image.open('inverted.jpg').convert('RGB').save('1.gif');
+        image = "1.gif"
+
     # Ooen main program window
     main = eg.buttonbox(msg, title, image=image, choices=choices)
 
@@ -38,12 +45,15 @@ while 1:
         # TODO: insert code here to do things with filename, as it contains the actual jpeg file.
 
         # Converts selected file so it can be displayed on image selection.
-        Image.open(filename).convert('RGB').save('372151.jpg')
+        image = Image.open(filename).convert('RGB').save('372151.jpg')
 
 
     # If the user wants to perform image processing
     elif main == procMsg:
         #TODO
+        inverted_image = PIL.ImageOps.invert(image)
+        inverted_image.save('inverted.jpg')
+        useInverted = True;
         pass
 
     # If the user wants to analyze an image
