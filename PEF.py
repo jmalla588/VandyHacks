@@ -34,6 +34,7 @@ while 1:
     if useInverted:
         Image.open('inverted.jpg').convert('RGB').save('1.gif');
         image = "1.gif"
+        useInverted = False;
 
     # Ooen main program window
     main = eg.buttonbox(msg, title, image=image, choices=choices)
@@ -51,7 +52,8 @@ while 1:
     # If the user wants to perform image processing
     elif main == procMsg:
         #TODO
-        inverted_image = PIL.ImageOps.invert(image)
+        conImage = Image.open(filename)
+        inverted_image = PIL.ImageOps.invert(conImage)
         inverted_image.save('inverted.jpg')
         useInverted = True;
         pass
