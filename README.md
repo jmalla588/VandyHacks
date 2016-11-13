@@ -17,10 +17,10 @@ camera.py, main.py, index.html, ngrok, python3, random people on stack overflow
 
 ###Step 2: Amazon EC2 and Convolutional Neural Network
 
-Once our video stream was on the internet and available, we created an *Amazon EC2 instance* which is capable of intensive GPU related calculations. Like actually, that stuff is reeeeal nifty. We used our EC2 instance in conjunction with a *deep learning framework known as TensorFlow*, and it allowed us to quickly process frames from our video stream and detect the various objects present in said frames. We used specifically created a python script to parse the stream and save frames for further analysis - these frames then were sent through the TensorFlow framework.
+Once our video stream was on the internet and available, we created an *Amazon EC2 instance* which is capable of intensive GPU related calculations. Like actually, that stuff is reeeeal nifty. We used our EC2 instance in conjunction with a *deep learning framework known as TensorFlow*, and it allowed us to quickly *process frames from our video stream and detect the various objects present in said frames*. We used specifically created a python script to parse the stream and save frames for further analysis - these frames then were sent through the TensorFlow framework.
 
 ####Relevant files, services, & credits (thanks for providing us with stuff!):
-TensorFlow framework, Amazon EC2, python3, random people on stack overflow
+TensorFlow framework (classify_image.py), Amazon EC2, python3, random people on stack overflow
 
 
 ###Step 3: GroupMe Bot?
