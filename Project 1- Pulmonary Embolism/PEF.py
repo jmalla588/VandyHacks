@@ -6,8 +6,8 @@ from PIL import Image
 import PIL.ImageOps
 from PIL import ImageFilter
 # import os
-import skimage
-from skimage import io
+#import skimage
+#from skimage import io
 # from skimage import data
 #from skimage.morphology import disk
 # #from skimage.filters.rank import subtract)mean
@@ -16,7 +16,7 @@ from skimage import io
 
 title = "Embolism or nah?"
 selMsg = "Select an Image"
-quitMsg = "Go Fuck Yourself"
+quitMsg = "Quit"
 procMsg = "Perform Pre-Processing"
 analyzeMsg = "Analyze Selected Image"
 
@@ -67,7 +67,7 @@ while 1:
         print("penis")
         #Filtering bullshit
         # fn = os.path.join(skimage.data_dir, 'inverted.jpg')
-        xTestImg = io.imread(filename)
+        #xTestImg = io.imread(filename)
         # yTestImg = skimage.color.gray2rgb(xTestImg, alpha=None)
         # viewer = ImageViewer(yTestImg)
         # viewer.show
