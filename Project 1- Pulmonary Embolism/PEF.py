@@ -64,8 +64,7 @@ while 1:
 
         inverted_image.save('inverted.jpg')
         useInverted = True;
-        print("penis")
-        #Filtering bullshit
+        #Filtering stuff - NOT WORKING AT THE MOMENT, CAUSES EXCEPTION.
         # fn = os.path.join(skimage.data_dir, 'inverted.jpg')
         #xTestImg = io.imread(filename)
         # yTestImg = skimage.color.gray2rgb(xTestImg, alpha=None)
